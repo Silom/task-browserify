@@ -1,0 +1,19 @@
+{
+  "name": "task-browserify",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Task for gulp",
+  "author": "Valentin Wetenkamp <wetenkamp@silpion.com>",
+  "scripts": {
+    "setup": "npm install"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "exorcist": "^0.4.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-util": "^3.0.5",
+    "vinyl-transform": "^1.0.0",
+    "watchify": "^3.2.2"
+  }
+}
