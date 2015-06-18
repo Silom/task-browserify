@@ -7,7 +7,8 @@ var plugins = {
   babelify: require('babelify'),
   gutil: require('gulp-util'),
   transform: require('vinyl-transform'),
-  exorcist: require('exorcist')
+  exorcist: require('exorcist'),
+  source: require('source-stream')
 }
 
 module.exports = function (gulp, param) {
