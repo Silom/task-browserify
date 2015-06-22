@@ -1,14 +1,13 @@
 'use strict';
 
 var plugins = {
-  plumber: require('gulp-plumber'),
   browserify: require('browserify'),
   watchify: require('watchify'),
   babelify: require('babelify'),
   gutil: require('gulp-util'),
   transform: require('vinyl-transform'),
   exorcist: require('exorcist'),
-  source: require('source-stream')
+  source: require('vinyl-source-stream')
 }
 
 module.exports = function (gulp, param) {
@@ -16,9 +15,9 @@ module.exports = function (gulp, param) {
     cache: {},
     packageCache: {},
     fullPaths: true,
+    entries: [param.rootFile],
     debug: gulp.configs.isProduction ? false : true
   })
-  browserify.add(param.rootFile)
 
   browserify.transform(plugins.babelify.configure({
     sourceMaps: gulp.configs.sourceMap
