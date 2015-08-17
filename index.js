@@ -16,11 +16,11 @@ module.exports = function (gulp, param) {
     packageCache: {},
     fullPaths: true,
     entries: [param.rootFile],
-    debug: gulp.configs.isProduction ? false : true
+    debug: false//gulp.isProduction ? false : true // do I need that if I use external maps?
   })
 
   browserify.transform(plugins.babelify.configure({
-    sourceMaps: gulp.configs.sourceMap
+    sourceMaps: false
   }))
 
 
@@ -40,7 +40,7 @@ module.exports = function (gulp, param) {
     })
     .pipe(plugins.source('bundle.js'))
     .pipe(
-      gulp.configs.isProduction ?
+      gulp.isProduction ?
       plugins.gutil.noop() :
       plugins.transform(function () {
         return plugins.exorcist(param.output + 'bundle.js.map')
