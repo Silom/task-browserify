@@ -1,6 +1,6 @@
 {
   "name": "task-browserify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Browserify task for gulp, ready to use.",
   "author": "Valentin Wetenkamp <valentin.wetenkamp@googlemail.com>",
   "main": "index.js",
